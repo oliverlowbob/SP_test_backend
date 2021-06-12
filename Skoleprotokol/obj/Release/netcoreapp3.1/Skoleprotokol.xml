@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Skoleprotokol</name>
+    </assembly>
+    <members>
+        <member name="M:Skoleprotokol.Controllers.AttendanceKeysController.GenerateKey(Skoleprotokol.Dtos.AttendanceKeyDto)">
+            <summary>
+            Generate key on given userId and classId
+            </summary>
+            <param name="attendanceKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.AttendanceKeysController.GenerateKeys(System.Int32)">
+            <summary>
+            Generates keys for all students in given class
+            </summary>
+            <param name="classId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.AttendanceKeysController.Validate(System.String)">
+            <summary>
+            Check if given attendance key is valid (10 minute timeframe after creation) 
+            </summary>
+            <param name="attendanceKey"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Skoleprotokol.Controllers.AuthenticationController">
+            <summary>
+            This class handles user authentication
+            </summary>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.AuthenticationController.AuthenticateUser(Skoleprotokol.Dtos.UserLoginDto)">
+            <summary>
+            Tries to authenticate the user with given user credentials
+            </summary>
+            <param name="userCredentials">The user credentials containing email and password</param>
+            <returns>
+            <para>A successful authentication returns a 200 (Ok) Status code with an access token for future requests.</para>
+            <para>A unsuccessful authentication returns a 422 (Unprocessable Entity) Status code.</para>
+            <para>A wrong request body returns a 400 (Bad Request) Status code.</para>
+            </returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.ClassController.GetClasses">
+            <summary>
+            Gets all classes for a logged in user
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.CourseController.GetCourse(System.Int32)">
+            <summary>
+            Gets a specific course
+            </summary>
+            <param name="courseId"></param>
+            <returns>The specified course</returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.MongoControllers.ClassControllerMongo.Create(Skoleprotokol.Models.MongoModels.ClassMongo)">
+            <summary>
+            Create a class
+            </summary>
+            <param name="classMongo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.MongoControllers.ClassControllerMongo.Get">
+            <summary>
+            Get all classes
+            </summary>
+            <returns>All classes</returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.MongoControllers.ClassControllerMongo.Get(System.String)">
+            <summary>
+            Get a class by id
+            </summary>
+            <param id="id"></param>
+            <returns>A class by id</returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.MongoControllers.ClassControllerMongo.Delete(System.String)">
+            <summary>
+            Delete a class by id
+            </summary>
+            <param name="id"></param>
+            <returns>NoContent</returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.MongoControllers.ClassControllerMongo.Update(System.String,Skoleprotokol.Models.MongoModels.ClassMongo)">
+            <summary>
+            Update a class
+            </summary>
+            <param name="id"></param>
+            <param name="classIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.MongoControllers.SchoolControllerMongo.Get">
+            <summary>
+            Get all schools
+            </summary>
+            <returns>All schools</returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.MongoControllers.SchoolControllerMongo.Get(System.String)">
+            <summary>
+            Get a school by id
+            </summary>
+            <param id="id"></param>
+            <returns>A school by id</returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.MongoControllers.SchoolControllerMongo.Create(Skoleprotokol.Models.MongoModels.SchoolMongo)">
+            <summary>
+            Create a new school
+            </summary>
+            <param name="school"></param>
+            <returns>The created school</returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.MongoControllers.SchoolControllerMongo.Update(System.String,Skoleprotokol.Models.MongoModels.SchoolMongo)">
+            <summary>
+            Update an existing school
+            </summary>
+            <param name="id"></param>
+            <param name="schoolIn"></param>
+            <returns>NoContent</returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.MongoControllers.SchoolControllerMongo.Delete(System.String)">
+            <summary>
+            Delete a school by id
+            </summary>
+            <param name="id"></param>
+            <returns>NoContent</returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.UserController.CreateUser(Skoleprotokol.Dtos.NewUserDto)">
+            <summary>
+            Creates a user
+            </summary>
+            <param name="newUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.UserController.UpdateUser(System.Int32,Skoleprotokol.Dtos.UserDto)">
+            <summary>
+            Updates a user from given id and user body
+            </summary>
+            <param name="id"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.UserController.GetAllUsers">
+            <summary>
+            Gets all users
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Skoleprotokol.Controllers.UserController.GetUser(System.Int32)">
+            <summary>
+            Get specific user
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Skoleprotokol.Dtos.NewUserDto">
+            <summary>
+            DTO class for when registering a new user.
+            </summary>
+        </member>
+        <member name="T:Skoleprotokol.Dtos.UserLoginDto">
+            <summary>
+            DTO class for authenticating a user login.
+            </summary>
+        </member>
+        <member name="M:Skoleprotokol.Services.MongoServices.ClassServiceMongo.Create(Skoleprotokol.Models.MongoModels.ClassMongo)">
+            <summary>
+            Create a new school
+            </summary>
+            <param name="classMongo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Skoleprotokol.Services.MongoServices.SchoolServiceMongo.Create(Skoleprotokol.Models.MongoModels.SchoolMongo)">
+            <summary>
+            Create a new school
+            </summary>
+            <param name="school"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Skoleprotokol.Services.MongoServices.SchoolServiceMongo.Remove(System.String)">
+            <summary>
+            REMOVE V2
+            </summary>
+            <param name="id"></param>
+        </member>
+    </members>
+</doc>

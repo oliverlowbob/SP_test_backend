@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <History>False|2021-06-12T16:40:30.9754992Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="MySqlConnection">
+      <Value>server=3.89.221.97%3b port=3306%3b database=scool_protocol%3b user=root%3b password=Nytpw123!%3b Persist Security Info=False%3b Connect Timeout=300</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

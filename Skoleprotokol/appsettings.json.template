@@ -8,7 +8,7 @@
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "MySqlConnection": "server=localhost; port=3306; database=scool_protocol; user=root; password=password; Persist Security Info=False; Connect Timeout=300"
+    "MySqlConnection": "server=3.89.221.97; port=3306; database=scool_protocol; user=root; password=Nytpw123!; Persist Security Info=False; Connect Timeout=300"
   },
   "BCryptOptions": {
     "BcryptHashRounds": 12
@@ -20,7 +20,7 @@
   "MongoDatabaseSettings": {
     "SchoolCollectionName": "School",
     "ClassCollectionName": "Class",
-    "ConnectionString": "mongodb+srv://jkh:<PASSWORD>@skoleprotokol.z5ila.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "ConnectionString": "mongodb+srv://jkh:Grammefon123@skoleprotokol.z5ila.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
     "DatabaseName": "Skoleprotokol"
   }
 }
